@@ -1,0 +1,86 @@
+name: Bug Report
+description: Create a bug report
+#title: ""
+labels: ["bug"]
+#assignees:
+#  -
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report.
+        Please check the existing issues before raising.
+  - type: markdown
+    value: "### Environment"
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        The [CLI](../../packages/cli) can be used to gather generic information about your system to assist with support.
+        No installation is required thanks to [npx](https://github.com/npm/npx)
+
+        ``` console
+        npx @cardano-graphql/cli system-info
+        ```
+    placeholder: Paste report here (Alternatively, what release or Git revision are you using)
+    validations:
+      required: false
+  - type: checkboxes
+    id: platform
+    attributes:
+      label: Platform
+      description: You may select more than one.
+      options:
+      - label: Linux (Ubuntu)
+      - label: Linux (Other)
+      - label: macOS
+      - label: Windows
+  - type: input
+    label: Platform version
+    placeholder: e.g. "Ubuntu 20.04.3 LTS"
+  - type: checkboxes
+    id: runtime
+    attributes:
+      label: Runtime
+      description: You may select more than one.
+      options:
+      - label: Node.js
+      - label: Docker
+  - type: input
+    label: Platform version
+    placeholder: Run `node -v` or `docker version`
+  - type: markdown
+    value: "### Description"
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: |
+        A clear and specific description of what the bug is.
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce the bug
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+    validations:
+      required: true
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual Result
+      description: What is the reproducible outcome?
+      placeholder: See error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected Result
+      description: A clear and concise description of what you expected to happen.
+      placeholder: No errors observed.
+    validations:
+      required: true
